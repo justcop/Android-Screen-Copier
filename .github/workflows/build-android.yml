@@ -22,8 +22,11 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      # GitHub-hosted Ubuntu runners already include Android command-line tools.
-      # Avoid deprecated 'sdkmanager tools' from setup-android's default install.
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
+
       - name: Install Android API 35
         run: sdkmanager --install 'platforms;android-35' 'build-tools;35.0.0'
 
