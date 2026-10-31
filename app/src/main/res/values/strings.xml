@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UI Probe</string>
+    <string name="service_description">On-demand local inspection of visible accessibility elements from one user-selected app. The probe only runs for two minutes after you start it.</string>
+</resources>
